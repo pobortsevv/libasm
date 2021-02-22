@@ -1,8 +1,7 @@
-global ft_strcmp
-
 section .text
+	global _ft_strcmp
 
-ft_strcmp:
+_ft_strcmp:
 	xor rcx, rcx
 	.next_char:
 		movzx rax, byte[rdi + rcx]

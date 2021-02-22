@@ -1,9 +1,7 @@
-global ft_strlen
-
-
 section .text
+	global _ft_strlen
 
-ft_strlen:
+_ft_strlen:
 	xor rax, rax
 	.next_char:
 		cmp [rdi + rax], byte 0

@@ -12,10 +12,10 @@ OBJS 	= $(SRCS:.s=.o)
 
 NASM 	= nasm
 FLAG 	= -f
-FORMAT 	= -macho64
+FORMAT 	= macho64
 
 %.o: 	%.s
-	$(NASM) $(FLAG) elf64 $< -o $@
+	$(NASM) $(FLAG) $(FORMAT) $< -o $@
 
 all:
 	$(MAKE) $(NAME) -j4
@@ -24,7 +24,7 @@ $(NAME):	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean: 
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) a.out 
 
 fclean: 	clean
 	rm -rf $(NAME)
