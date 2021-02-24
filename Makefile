@@ -24,9 +24,9 @@ $(NAME):	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean: 
-	rm -rf $(OBJS) a.out 
+	rm -rf $(OBJS) a.out
 
 fclean: 	clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) *.txt
 
 re:		fclean all

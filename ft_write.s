@@ -11,7 +11,7 @@ _ft_write:
 error:
 	push rax
 	call ___error
-	pop rcx
-	mov qword[rax], rcx
+	pop rbx
+	mov qword[rax], rbx
 	mov rax, -1
 	ret
